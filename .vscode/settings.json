@@ -1,0 +1,10 @@
+{
+    "sqlite3-editor.ui.conditionalFormatting": [
+        {
+            "database": "db.sqlite3",
+            "table": "profiles_user",
+            "column": "more_infos",
+            "equal": ""
+        }
+    ]
+}
