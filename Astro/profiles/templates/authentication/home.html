@@ -1,0 +1,63 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+<!-- extention de notre template de base 
+ base.html dans le dossier template -->
+  {% extends 'base.html' %}
+
+
+  {% block content %}
+
+  <h3 style="margin-left:10px">liste des profiles : </h3>
+  {% for user in users %}
+  <br>
+  <br>
+  <div class="card" style="width: 400px; margin-left: 10px;">
+    <h3 class="card-title">
+      <!-- nom des personnels de l'entreprise -->
+
+      {{ user.name }}
+    </h3>
+    <!-- bio du personel de l'entreprise -->
+
+    <h6 class="card-body">
+      {{ user.bio }}
+      
+    </h6>
+    <!-- photo de profile -->
+
+    <img src="../static/{{user.picture}}" alt="">
+    <div class="btn-group" role="group" aria-label="Basic example">
+    </div>
+    <!-- prefix room utiliser pour gerer les differentes conversation -->
+
+  
+ la room de {{user.name}} : 
+    <a href="/{{user.chat.name}}/?username={{user.name}}" class="btn btn-primary">{{user.chat.name}}</a>
+
+
+   </b>
+    <!-- en lien direct avec les differents chat -->
+
+  </div>
+
+
+  </div>
+  {% endfor %}
+
+  <br>
+  <br>
+  <br> <!-- separation-->
+
+  {% endblock content %}
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<html>
+    
+    <head>
+        <title>Millenium</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    </head>
+    <body>
+        
+        <h2>Millenium</h2>
+        <main style="margin: 10px;">
+        
+            <nav class="nav nav-pills nav-fill">
+                <a class="nav-link active" aria-current="page" href="/home/">home</a>
+                <a class="nav-link" href="/login/">login</a>
+                <a class="nav-link active " href="/signup/">Signup</a>
+                <a class="nav-link" href="/">Chat</a>
+              </nav>
+              
+        </main>
+        {% block content %}
+        <!-- ... 
+         
+        on insert du code avec la fonction 'extends' de django
+        
+        .. home
+        .. login
+        .. signup
+        .. Plus
+
+        
+        --> 
+
+        {% endblock content %}
+
+<p>
+    
+
+    You are logged in as {{ request.user }}. Click here to <a href="{% url 'logout' %}">log out</a></p>
+</body>
+</html>
